@@ -192,7 +192,7 @@ while len(lines) > 0:
 
         # write 2nd-order force constant in the format of shengBTE
         fid = open('FORCE_CONSTANTS_2ND', 'wt')
-        print(Nsatom, file=fid)
+        print('{:6.0f} {:6.0f}'.format(Nsatom, Nsatom), file=fid)
         for i in range(Nsatom*Nsatom):
             print('{:3.0f} {:3.0f}'.format(atom_pair[i][0], atom_pair[i][1]), file=fid)
             print('{:>15.8f} {:>15.8f} {:>15.8f}'.format(fc_matrix[i][0][0],fc_matrix[i][0][1],fc_matrix[i][0][2]), file=fid)
