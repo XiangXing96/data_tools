@@ -1,0 +1,6 @@
+#!/bin/bash
+module load use.own
+module load compiler/intel/2023.0.0
+
+
+/home/user/Desktop/Software/EP_couling_PERTURBO/qe-7.2/bin/q2r.x < q2r.inp > q2r.out
