@@ -547,17 +547,17 @@ for i in range(len(irqp)):
             id_s2 = id_s2[0,1]
             #print(" id_s2[0] "+str(id_s2))
             if s1 == s2:
-                matrix_x[id_s1,id_s2] = Kpx[i,s1] / N_total_modes
-                matrix_y[id_s1,id_s2] = Kpy[i,s1] / N_total_modes
-                matrix_z[id_s1,id_s2] = Kpz[i,s1] / N_total_modes
+                matrix_x[id_s1,id_s2] += Kpx[i,s1] / N_total_modes
+                matrix_y[id_s1,id_s2] += Kpy[i,s1] / N_total_modes
+                matrix_z[id_s1,id_s2] += Kpz[i,s1] / N_total_modes
                 #print(matrix_x[id_s1,id_s2] * N_total_modes)
                 #print(matrix_x[id_s1,id_s2]* N_total_modes)
                 #print(Kpy[i,s1])
 
             else:
-                matrix_x[id_s1,id_s2] = Kcx[i,s1,s2] / N_total_modes
-                matrix_y[id_s1,id_s2] = Kcy[i,s1,s2] / N_total_modes
-                matrix_z[id_s1,id_s2] = Kcz[i,s1,s2] / N_total_modes
+                matrix_x[id_s1,id_s2] += Kcx[i,s1,s2] / N_total_modes
+                matrix_y[id_s1,id_s2] += Kcy[i,s1,s2] / N_total_modes
+                matrix_z[id_s1,id_s2] += Kcz[i,s1,s2] / N_total_modes
                 #print(matrix_x[id_s1,id_s2] * N_total_modes)
                 #print(matrix_x[id_s1,id_s2])
                 #print(Kcx[i,s1,s2])
