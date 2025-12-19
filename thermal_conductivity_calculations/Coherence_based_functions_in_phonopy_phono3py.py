@@ -5,6 +5,8 @@ the scattering rate is introduced from the calculation
 in ShengBTE. THe mesh (Nx, Ny, Nz) should all be odd to 
 keep agreement with the result from phonopy and phono3py.
 The author is XIANG Xing (xxiangad@connect.ust.hk).
+If you use this code, we recommand you to cite 10.1063/5.0190047 
+and papers of phonopy, phono3py (https://phonopy.github.io/phono3py/citation.html).  
 '''
 
 from functools import reduce
