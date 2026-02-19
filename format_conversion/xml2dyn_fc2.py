@@ -100,27 +100,6 @@ def extract_force_constants(xml_file):
             phi_q.append(phi_i)
         phi.append(phi_q)
     phi = np.array(phi)
-
-
-#     for i in range(N_atoms):
-#         phi_i = []
-#         for j in range(N_atoms):
-#             phi_ij = root.find(f'DYNAMICAL_MAT_.1/PHI.{i+1}.{j+1}').text.strip().split()
-#             phi_ij = [float(param) for param in phi_ij]
-# #            print(f"Phi_{i+1}_{j+1} (raw):", phi_ij)
-#             #phi_ij = np.array(phi_ij).reshape((3, -1))
-#             phi_lk = []
-#             for l in range(int(len(phi_ij)/2)):
-#                 temp_phi = complex(phi_ij[2*l],phi_ij[2*l+1])
-
-#                 phi_lk.append(temp_phi)
-#             phi_lk = np.array(phi_lk).reshape((3,-1))
-#             phi_ij = np.transpose(phi_lk)  
-#             #print(f"Phi_{i+1}_{j+1} (processed):\n", phi_ij)
-#             #print(f"Phi_{i+1}_{j+1}:\n", phi_ij)
-#             phi_i.append(phi_ij)
-#         phi.append(phi_i)
-#     phi = np.array(phi)
     
     print("Phi shape:", np.shape(phi))
 
